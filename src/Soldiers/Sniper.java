@@ -23,13 +23,4 @@ public class Sniper extends Soldier implements Shootable, Shooter {
         setHealth(i);
     }
 
-    public void setShootPower(int shootPower) {
-        this.shootPower = shootPower;
-    }
-
-    @Override
-    public void show() {
-        super.show();
-
-    }
 }

@@ -35,17 +35,17 @@
 package Soldiers;
 
 
+import com.brunoyam.unit_2.Unit;
 
-abstract class Soldier {
+abstract class Soldier extends Unit {
+
      private int health;
-     private int maxSpeed;
-     private int armorLevel;
 
-    Soldier(int armorLevel, int maxSpeed, int health) {
-        this.armorLevel = armorLevel;
+    public Soldier(int armorLevel, int maxSpeed, int health) {
+        super(armorLevel, maxSpeed);
         this.health = health;
-        this.maxSpeed = maxSpeed;
     }
+
 
     public int getHealth() {
         return health;
@@ -56,25 +56,8 @@ abstract class Soldier {
         return health;
     }
 
-    public int getMaxSpeed() {
-        return maxSpeed;
-    }
 
-    public void setMaxSpeed(int maxSpeed) {
-        this.maxSpeed = maxSpeed;
-    }
 
-    public int getArmorLevel() {
-        return armorLevel;
-    }
-
-    public void setArmorLevel(int armorLevel) {
-        this.armorLevel = armorLevel;
-    }
-
-    public void show (){
-        System.out.println(armorLevel + " - Armor level; " + maxSpeed + " - Max speed; " + health + " - Health;");
-    }
 }
 
 
